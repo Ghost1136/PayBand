@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("C:\Users\danie\Documents\HTML IHC\Fuentes\Montserrat-VariableFont_wght.ttf") format('truetype');
+}
+
+.Nombre-bot{
+    display: flex;
+    align-items: center;
+    padding: 7px 0 14px;
+    border-bottom: 3px solid transparent;
+    font-size: 30px;
+    color: var(--colorTextPrimary, #ffffff);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo_landp{
+    width: 50px; height: 50px; border-radius:50%; object-fit:cover;
+}
+
+.titulo{
+    text-align: left;
+    font-size: 80px;
+    margin: 40px 0px 0px 150px;
+    color: var(--colorTextPrimary, #ffffff);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botones{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botones:hover{
+    color: var(--colorTextPrimary, #000);
+    text-decoration: underline;
+}
+
+.t1
+{
+    display: flex; align-items: center; gap: 30px;
+    margin-right: 40px;
+}
+
+.ubicacion{
+    display: flex; align-items: center; list-style: none; margin: 0; padding: 0;
+}
+
+body {
+    /* Degradado de celeste a azul a celeste */
+    background: linear-gradient(90deg, #60CFF4 0%, #3378C7 50%, #60CFF4 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.barra_opciones{
+    background-color: #094074; width: 100%; padding: 0px;
+}
+
+.flechas{
+    background: none; border: none; cursor: pointer; margin-left: 20px; margin-right: 20px; padding: 0;
+}
