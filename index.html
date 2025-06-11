@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PayBand</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="payband_logo.png">
+    <link rel="icon" type="image/png" href="imagenes/payband_logo.png">
 </head>
 <body>
     <div class= "barra_opciones">
         <div style="margin: 0 0 40px 100px;">
             <ul class="ubicacion">
                 <li class="t1">
-                    <a href="intento_landing.html">
-                        <img class="logo_landp" src="payband_logo.png" alt="payband_logo">
+                    <a href="index.html">
+                        <img class="logo_landp" src="imagenes/payband_logo.png" alt="payband_logo">
                     </a>
                 </li>
                 <li class="t1">
@@ -35,29 +35,62 @@
         </div>
     </div>
 
-    <div style="display: flex; align-items: center; justify-content: center; margin-top: 0;">
+    <div class="contenedor-principal">
         <!-- Botón flecha izquierda SVG -->
-        <button class="flechas" aria-label="Anterior">
-            <!-- El SVG lo puedes sacar de figma, literal lo da hecho XD-->
-            <!-- SVG permite dibujar en html así como figma pero más tryhard -->
+        <button class="flechas" aria-label="Anterior" id="prevBtn">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M60 10L10 49.2638L60 90" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        
         </button>
-        <div style="flex: 1; display: flex; justify-content: center;">
+        <div class="contenedor-titulo">
             <h1 class="titulo">"Tu Viaje, tu ritmo, tu Payband"</h1>
         </div>
-        <div style="flex: 1; display: flex; justify-content: center;">
-            <img src="prueba22.jpg" alt="Payband" style="max-width: 40%; height: auto;">
+        <div class="contenedor-lista_imagenes">
+            <img id="paybandImage" src="" alt="Payband" style="max-width: 40%; height: auto;">
         </div>
         <!-- Botón flecha derecha SVG -->
-        <button class="flechas" aria-label="Siguiente">
+        <button class="flechas" aria-label="Siguiente" id="nextBtn">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 90L60 50.7362L10 10" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
+        </div>
+        <script>
+        const images = [
+            "imagenes/prueba22.jpg",
+            "imagenes/prueba23.jpg",
+            "imagenes/prueba24.jpg",
+            "imagenes/prueba25.jpeg"
+        ];
+        let currentIndex = 0;
+        const imgElement = document.getElementById('paybandImage');
+        // Inicializa la imagen al cargar la página
+        imgElement.src = images[currentIndex];
+        document.getElementById('prevBtn').onclick = function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            imgElement.src = images[currentIndex];
+        };
+        document.getElementById('nextBtn').onclick = function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+        };
+        </script>
     </div>
+    
+    <div class="contenedor-up-footer">
+            <div class="contenedor-imagen">
+                <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="transaction">
+            </div>
+            <div class="information">
+                <p class="Fecha">Monday 31, March 2025</p> <!-- Fecha de ejemplo -->
+                <p class="Descripcion">Paga justo según tu viaje. Sin efectivo, sin discusiones.</p>
+            <div>
+                <!-- Incluir video -->
+            </div>
+    </div>
+
+    
+
     <div class="footer">
         <p>© 2025 PayBand. Todos los derechos reservados.</p>
     </div>
