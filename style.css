@@ -75,7 +75,7 @@ body {
     padding: 0;
 }
 .footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -83,6 +83,10 @@ body {
     color: #fff;
     text-align: center;
     padding: 4px;
+}
+
+.footer .Mensaje{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .barra_opciones{
@@ -106,11 +110,18 @@ body {
 
 .contenedor-lista_imagenes{
     flex: 1; display: flex; justify-content: center;
+    
+}
+
+.img-secuencia{
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 10%;
 }
 
 .contenedor-imagen{
     display: flex;
-    padding: 30px 10px 10px 100px;
+    padding: 40px 10px 10px 100px; /*Arriba Derecha Abajo Izquierda*/
     width: 350px; height: 350px;
 }
 
@@ -121,46 +132,228 @@ body {
 
 .contenedor-up-footer{
     background: #C7E6FF; 
-    min-height: 100vh;
+    min-height: 60vh;
     margin: 0;
     padding: 0;
-
-    display: flex; align-items: center;
+    display: flex;
 
 }
-
-/*.boton-descargar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    gap: 10px;
-
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    left: 910px;
-    top: 488.3px;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-
-}*/
 
 .information{
     margin-left: 200px;
-    margin-right: 650px;
+    margin-right: 60px;
     padding: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
 }
 .Fecha{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 .Descripcion{
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+}
+.video-container {
+    margin-left: 10px;
+    margin-right: 70px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-clip {
+    width: 320px;
+    height: 180px;
+}
+
+.Socios-img {
+    margin-top: 20px;
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+h2 {
+    background-color: #094074;
+    color: white;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    left: 0;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+section {
+  padding: 40px 40px 20px 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registro form,
+.registro .login-google {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registro input,
+.registro select,
+.registro button {
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.google-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.funciona-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.funciona .texto {
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.video .play-btn {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.iconos{
+    display: inline-flex;
+}
+
+.iconos .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+    margin: 0 20px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconos .icon span{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background-color: #d2dae2;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.iconos .icon span i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.iconos .icon:hover span i{
+    color: #d2dae2;
+
+}
+
+.iconos .icon .tooltip{
+    background-color: #d2dae2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    color: #d2dae2;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconos .icon:hover .tooltip{
+    opacity: 1;
+    top: -70px;
+    pointer-events: none;
+}
+
+.iconos .icon .tooltip::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    bottom: -8px;
+    background-color: #d2dae2;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconos .icon:hover span,
+.iconos .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.iconos .whatsapp:hover span,
+.iconos .whatsapp:hover .tooltip,
+.iconos .whatsapp:hover .tooltip::before{
+    background-color: #25d366;
+}
+
+.iconos .phone:hover span,
+.iconos .phone:hover .tooltip,
+.iconos .phone:hover .tooltip::before{
+    background-color: rgb(0, 0, 0);
+}
+
+.iconos .email:hover span,
+.iconos .email:hover .tooltip,
+.iconos .email:hover .tooltip::before{
+    background-color: #c4302b;
+}
+
+
+@media (max-width: 768px) {
+    .Nombre-bot {
+        font-size: 16px;
+    }
+
+    .ubicacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .registro form,
+    .registro .login-google {
+        width: 90%;
+    }
+
+    .funciona-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
