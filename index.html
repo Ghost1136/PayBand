@@ -88,24 +88,24 @@
     </div>
     
     <div class="contenedor-up-footer">
-        <div class="contenedor-imagen">
-            <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="Transacción realizada con PayBand">
-        </div>
-        <div class="information">
-            <p class="Fecha">Monday 31, March 2025</p>
-            <p class="Descripcion">Paga justo según tu viaje. Sin efectivo, sin discusiones.</p>
-        </div>
-        <div class="video-container">
-            <iframe 
-                class="video-clip"
-                src="https://www.youtube.com/embed/wYo0gV_sBUg" 
-                title="YouTube video player"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <img class="Socios-img" src="Imagenes/Prueba28.jpg" alt="Socios comerciales de PayBand">
-        </div>
+            <div class="contenedor-imagen">
+                <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="transaction">
+            </div>
+            <div class="information">
+                <p class="Fecha" id="fecha-actual"></p>
+                <p class="Descripcion">Paga justo según tu viaje. Sin efectivo, sin discusiones.</p>
+            </div>
+            <div class="video-container">
+                <iframe 
+                    class="video-clip"
+                    src="https://www.youtube.com/embed/wYo0gV_sBUg" 
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <img class="Socios-img" src="Imagenes/Prueba28.jpg" alt="partner">
+            </div>
     </div>
 
     <!-- Sección Registro -->
@@ -180,6 +180,19 @@
     <div class="footer">
         <p class="Mensaje">© 2025 PayBand. Todos los derechos reservados.</p>
     </div>
+    <script>
+    const fechaElemento = document.getElementById('fecha-actual');
+    const fechaActual = new Date();
+    const opcionesFecha = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    const fechaFormateada = fechaActual.toLocaleDateString('es-PE', opcionesFecha);
+    fechaElemento.textContent = fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+    </script>
+    
 </body>
 </html>
 
