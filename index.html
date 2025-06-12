@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/payband_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 <body>
-    <div class= "barra_opciones">
-        <div style="margin: 0 0 50px 100px;">
+    <div class="barra_opciones">
+        <div style="margin: 0 0 40px 100px;">
             <ul class="ubicacion">
                 <li class="t1">
                     <a href="index.html">
-                        <img class="logo_landp" src="imagenes/payband_logo.png" alt="payband_logo">
+                        <img class="logo_landp" src="imagenes/payband_logo.png" alt="Logo de PayBand">
                     </a>
                 </li>
                 <li class="t1">
@@ -23,7 +22,7 @@
                         <div class="Nombre-bot">Registro</div>
                     </a>
                 </li>
-                <li class="t1" >
+                <li class="t1">
                     <a class="botones" type="button" href="#funciona">
                         <div class="Nombre-bot">Como funciona</div>
                     </a>
@@ -48,7 +47,7 @@
             <h1 class="titulo">"Tu Viaje, tu ritmo, tu Payband"</h1>
         </div>
         <div class="contenedor-lista_imagenes">
-            <img class="img-secuencia" id="paybandImage" src="" alt="Payband">
+            <img class="img-secuencia" id="paybandImage" src="" alt="Imagen de PayBand">
         </div>
         <!-- Botón flecha derecha SVG -->
         <button class="flechas" aria-label="Siguiente" id="nextBtn">
@@ -56,7 +55,6 @@
             <path d="M10 90L60 50.7362L10 10" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
-        </div>
         <script>
         const images = [
             "imagenes/prueba22.jpg",
@@ -66,64 +64,74 @@
         ];
         let currentIndex = 0;
         const imgElement = document.getElementById('paybandImage');
-        // Inicializa la imagen al cargar la página
         imgElement.src = images[currentIndex];
+        imgElement.style.opacity = 1; // inicializamos la opacidad
+
         document.getElementById('prevBtn').onclick = function() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            imgElement.src = images[currentIndex];
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                imgElement.src = images[currentIndex];
+                imgElement.style.opacity = 1;
+            }, 300);
         };
+
         document.getElementById('nextBtn').onclick = function() {
-            currentIndex = (currentIndex + 1) % images.length;
-            imgElement.src = images[currentIndex];
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                imgElement.src = images[currentIndex];
+                imgElement.style.opacity = 1;
+            }, 300);
         };
         </script>
     </div>
     
     <div class="contenedor-up-footer">
-            <div class="contenedor-imagen">
-                <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="transaction">
-            </div>
-            <div class="information">
-                <p class="Fecha">Monday 31, March 2025</p> <!-- Fecha de ejemplo -->
-                <p class="Descripcion">Paga justo según tu viaje. Sin efectivo, sin discusiones.</p>
-            </div>
-            <div class="video-container">
-                <iframe 
-                    class="video-clip"
-                    src="https://www.youtube.com/embed/wYo0gV_sBUg" 
-                    title="YouTube video player"
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                <img class="Socios-img" src="Imagenes/Prueba28.jpg" alt="partner">
-            </div>
+        <div class="contenedor-imagen">
+            <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="Transacción realizada con PayBand">
+        </div>
+        <div class="information">
+            <p class="Fecha">Monday 31, March 2025</p>
+            <p class="Descripcion">Paga justo según tu viaje. Sin efectivo, sin discusiones.</p>
+        </div>
+        <div class="video-container">
+            <iframe 
+                class="video-clip"
+                src="https://www.youtube.com/embed/wYo0gV_sBUg" 
+                title="YouTube video player"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <img class="Socios-img" src="Imagenes/Prueba28.jpg" alt="Socios comerciales de PayBand">
+        </div>
     </div>
 
     <!-- Sección Registro -->
     <section class="registro" id="registro">
         <h2>Registro</h2>
         <form>
-        <label for="nombre">Nombres:</label>
-        <input type="text" id="nombre" name="nombre" required />
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" name="nombre" required />
 
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" required />
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required />
 
-        <label for="rol">Rol:</label>
-        <select id="rol" name="rol">
-            <option value="pasajero">Pasajero</option>
-            <option value="admin">Admin.</option>
-        </select>
+            <label for="rol">Rol:</label>
+            <select id="rol" name="rol">
+                <option value="pasajero">Pasajero</option>
+                <option value="admin">Admin.</option>
+            </select>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required />
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required />
 
-        <button type="submit">Enviar</button>
+            <button type="submit">Enviar</button>
         </form>
         <div class="login-google">
-        <p>Login</p>
-        <button class="google-btn">Google</button>
+            <p>Login</p>
+            <button class="google-btn">Google</button>
         </div>
     </section>
 
@@ -131,13 +139,13 @@
     <section class="funciona" id="funciona">
         <h2>Cómo funciona</h2>
         <div class="funciona-content">
-        <div class="texto">
-            <p>Esta app fue diseñada para una interaccion intuitiva y util. Tanto el administrador como el pasajero podran disfrutar de las herramientas que ofrece nuestra app</p>
-            <p>Mira nuestro tutorial:</p>
-        </div>
-        <div class="video">
-            <button class="play-btn">▶</button>
-        </div>
+            <div class="texto">
+                <p>Esta app fue diseñada para una interacción intuitiva y útil. Tanto el administrador como el pasajero podrán disfrutar de las herramientas que ofrece nuestra app.</p>
+                <p>Mira nuestro tutorial:</p>
+            </div>
+            <div class="video">
+                <button class="play-btn">▶</button>
+            </div>
         </div>
     </section>
 
