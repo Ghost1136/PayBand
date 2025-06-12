@@ -139,7 +139,7 @@ body {
 .information{
     margin-left: 200px;
     margin-right: 60px;
-    padding: 40px;
+    padding: 20px;
 }
 .Fecha{
     font-family: 'Montserrat', sans-serif;
@@ -353,4 +353,8 @@ section {
         flex-direction: column;
         text-align: center;
     }
+}
+.test-padding {
+  padding: 30px;
+  background-color: #e0e0e0;
 }
