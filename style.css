@@ -129,7 +129,7 @@ body {
 
 .contenedor-up-footer{
     background: #C7E6FF; 
-    min-height: 60vh;
+    min-height: 80vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -137,40 +137,71 @@ body {
 }
 
 .information{
-    margin-left: 200px;
-    margin-right: 60px;
-    padding: 20px;
+    position: relative;
+    left: 220px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;;
 }
-.Fecha{
+
+.information .Fecha{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
 }
-.Descripcion{
+.information .Descripcion{
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 30px;
 }
 .video-container {
-    margin-left: 10px;
-    margin-right: 70px;
-    padding: 20px;
+    position: relative;
+    top: 150px;
+    left: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.video-clip {
+.video-container .video-clip {
     width: 320px;
     height: 180px;
 }
 
-.Socios-img {
-    margin-top: 20px;
+.video-container .Socios-img {
     width: 320px;
     height: 180px;
-    object-fit: cover;
-    display: block;
+    padding-top: 20px;
 }
+
+.Tutorial {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 130px;
+    left: 350px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-descargar{
+    position: relative;
+    top: 20px;
+    right: 180px;
+}
+.banner-descargar .download-btn{
+    display: flex; 
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+}
+
+.banner-descargar .download-btn img{
+    width:32px; 
+    height:32px;
+    margin-left: 10px;
+}
+
 
 h2 {
     background-color: #094074;
@@ -334,7 +365,7 @@ section {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .Nombre-bot {
         font-size: 16px;
     }
