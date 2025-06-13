@@ -1,68 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-.Nombre-bot{
-    display: flex;
+
+
+
+
+header {
+    background-color: #094074;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.logo_landp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header .container{
+    display:flex; 
+    flex-direction: column; 
     align-items: center;
-    padding: 7px 0 14px;
-    border-bottom: none; /* Quita la línea negra */
-    font-size: 30px;
-    color: var(--colorTextPrimary, #ffffff);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    border: 0;
-    outline: none;
-    background: none;
-    transition: color 0.3s, border-bottom-color 0.3s;
+
+    max-width: 1400px;
+    margin: auto;
+    height: 100px;
+
 }
 
-.Nombre-bot:hover,
-.Nombre-bot:focus,
-.Nombre-bot:active {
-    color: #ffffff;
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+header .container nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 20px;
 }
 
-.logo_landp{
-    width: 50px; height: 50px; border-radius:50%; object-fit:cover;
-}
-
-.titulo{
-    font-size: 70px;
-    padding: 0px 0px 40px 100px; /*Arriba Derecha Abajo Izquierda*/
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.botones{
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    font: inherit;
-    text-align: left;
-    -webkit-text-decoration: none;
+header .container a{
+    padding: 5px 15px;
     text-decoration: none;
-    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.botones:hover{
-    color: var(--colorTextPrimary, #000);
+header a:hover{
     text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
 }
 
-.t1
-{
-    display: flex; align-items: center; gap: 30px;
-    margin-right: 40px;
-}
-
-
-.ubicacion{
-    display: flex; align-items: center; list-style: none; margin: 0; padding: 0;
-}
 
 body {
     /* Degradado de celeste a azul a celeste */
@@ -71,18 +60,13 @@ body {
     margin: 0;
     padding: 0;
 }
-.footer {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
+
+footer {
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 4px;
-}
-
-.footer .Mensaje{
+    padding: 10px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -98,102 +82,104 @@ body {
 
 .contenedor-principal{
     display: flex; align-items: center; justify-content: center; margin-top: 0;
-    min-height: 45vh;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .contenedor-titulo{
     flex: 1; display: flex; justify-content: center;
 }
 
-.contenedor-lista_imagenes{
-    flex: 1; display: flex; justify-content: center;
-    
+.contenedor-titulo h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
 }
 
-.img-secuencia{
-    max-width: 40%;
-    max-height: 40%;
+.contenedor-lista_imagenes{
+    flex: 1; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-secuencia {
+    width: 80%;
+    height: auto;
     border-radius: 10%;
 }
 
 .contenedor-imagen{
-    display: flex;
-    padding: 40px 10px 10px 100px; /*Arriba Derecha Abajo Izquierda*/
-    width: 350px; height: 350px;
+    width: 300px;
+
 }
 
 .transaction-img{
+    width: 100%;
     border-radius: 10%;
     object-fit: cover;
+
 }
 
 .contenedor-up-footer{
-    background: #C7E6FF; 
-    min-height: 80vh;
-    margin: 0;
-    padding: 0;
+    background: #C7E6FF;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
 
 }
 
 .information{
-    position: relative;
-    left: 220px;
-    top: 80px;
-    display: flex;
-    flex-direction: column;;
+    max-width: 300px;
 }
 
 .information .Fecha{
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 .information .Descripcion{
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 24px;
 }
 .video-container {
-    position: relative;
-    top: 150px;
-    left: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 360px;
 }
 
 .video-container .video-clip {
-    width: 320px;
-    height: 180px;
+    max-width: 360px;
 }
 
 .video-container .Socios-img {
-    width: 320px;
-    height: 180px;
-    padding-top: 20px;
+    max-width: 360px;
 }
 
 .Tutorial {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 130px;
-    left: 350px;
+    max-width: 400px;
     font-family: 'Montserrat', sans-serif;
 }
 
+.Tutorial p{
+    margin-bottom: 10px;
+}
+
 .banner-descargar{
-    position: relative;
-    top: 20px;
-    right: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .banner-descargar .download-btn{
-    display: flex; 
+    display: flex;
     align-items: center;
-    width: 400px;
-    height: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    background-color: #ffffff;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
 }
 
 .banner-descargar .download-btn img{
@@ -365,16 +351,8 @@ section {
 }
 
 
-@media (max-width: 720px) {
-    .Nombre-bot {
-        font-size: 16px;
-    }
-
-    .ubicacion {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+@media (min-width: 720px) {
+    
     .registro form,
     .registro .login-google {
         width: 90%;
@@ -383,6 +361,26 @@ section {
     .funciona-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row; 
+        padding-bottom: 0;
+        padding-right: 50px; ;
+    }
+
+    header .container nav a{
+        padding: 10px 20px;
+        font-size: 1.5rem;
     }
 }
 .test-padding {
