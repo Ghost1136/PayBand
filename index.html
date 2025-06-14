@@ -21,23 +21,20 @@
         </div>
     </header>
 
-    <div class="contenedor-principal">
+    <div class="contenedor-principal" id="contenedorPrincipal" style="position: relative;">
+        <div class="contenedor-titulo" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 100%; text-align: center;">
+            <h1 class="titulo" style="color: white; text-shadow: 2px 2px 8px #000;">"Tu Viaje, tu ritmo, tu Payband"</h1>
+        </div>
         <!-- Botón flecha izquierda SVG -->
-        <button class="flechas" aria-label="Anterior" id="prevBtn">
+        <button class="flechas" aria-label="Anterior" id="prevBtn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 10L10 49.2638L60 90" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M60 10L10 49.2638L60 90" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
-        <div class="contenedor-titulo">
-            <h1 class="titulo">"Tu Viaje, tu ritmo, tu Payband"</h1>
-        </div>
-        <div class="contenedor-lista_imagenes">
-            <img class="img-secuencia" id="paybandImage" src="" alt="Imagen de PayBand">
-        </div>
         <!-- Botón flecha derecha SVG -->
-        <button class="flechas" aria-label="Siguiente" id="nextBtn">
+        <button class="flechas" aria-label="Siguiente" id="nextBtn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 90L60 50.7362L10 10" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 90L60 50.7362L10 10" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
         <script>
@@ -48,25 +45,31 @@
             "Imagenes/Prueba25.jpeg"
         ];
         let currentIndex = 0;
-        const imgElement = document.getElementById('paybandImage');
-        imgElement.src = images[currentIndex];
-        imgElement.style.opacity = 1; // inicializamos la opacidad
+        const contenedor = document.getElementById('contenedorPrincipal');
+        function setBg(index) {
+            contenedor.style.transition = "background-image 0.3s ease";
+            contenedor.style.backgroundImage = `url('${images[index]}')`;
+            contenedor.style.backgroundSize = "cover";
+            contenedor.style.backgroundPosition = "center";
+            contenedor.style.backgroundRepeat = "no-repeat";
+        }
+        setBg(currentIndex);
 
         document.getElementById('prevBtn').onclick = function() {
-            imgElement.style.opacity = 0;
+            contenedor.style.opacity = 0;
             setTimeout(() => {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
-                imgElement.src = images[currentIndex];
-                imgElement.style.opacity = 1;
+                setBg(currentIndex);
+                contenedor.style.opacity = 1;
             }, 300);
         };
 
         document.getElementById('nextBtn').onclick = function() {
-            imgElement.style.opacity = 0;
+            contenedor.style.opacity = 0;
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % images.length;
-                imgElement.src = images[currentIndex];
-                imgElement.style.opacity = 1;
+                setBg(currentIndex);
+                contenedor.style.opacity = 1;
             }, 300);
         };
         </script>
@@ -81,22 +84,19 @@
                 <p class="Descripcion"><b>Paga justo según tu viaje. Sin efectivo, sin discusiones.</b></p>
             </div>
             <div class="video-container">
-                <iframe 
-                    class="video-clip"
-                    src="https://www.youtube.com/embed/wYo0gV_sBUg" 
-                    title="YouTube video player"
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                <img class="Socios-img" src="Imagenes/Prueba28.jpg" alt="partner">
+                <iframe src="https://www.youtube.com/embed/djSSzgY1cMI?si=1gKyl45q9CQqgaaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <img class="Socios-img" src="Imagenes/Prueba29.jpg" alt="partner">
             </div>
             <div class="Tutorial">
-                <p><b>Como usar la pulsera inteligente</b></p>
-                <p>Tutorial de como usar la pulsera inteligente en el transporte público</p>
-                <br>
-                <p><b>Empresas de transportes</b></p>
-                <p>Empresas legales que están asociadas</p>
+                <div class="Tutoriales">
+                    <p><b>Como usar la pulsera inteligente</b></p>
+                    <p>Tutorial de como usar la pulsera inteligente en el transporte público</p>
+                </div>
+                <br> <br> <br>
+                <div class="Socios">
+                    <p><b>Empresas de transportes</b></p>
+                    <p>Empresas legales que están asociadas</p>
+                </div>
             </div>
 
             <div class="banner-descargar">
@@ -144,10 +144,18 @@
         <div class="funciona-content">
             <div class="texto">
                 <p>Esta app fue diseñada para una interacción intuitiva y útil. Tanto el administrador como el pasajero podrán disfrutar de las herramientas que ofrece nuestra app.</p>
-                <p>Mira nuestro tutorial:</p>
+                <p><b>Mira nuestro tutorial:</b></p>
             </div>
             <div class="video">
-                <button class="play-btn">▶</button>
+                <iframe 
+                    width="400"
+                    height="300"
+                    src="https://www.youtube.com/embed/wYo0gV_sBUg?si=QaeCJ_cGIj_cRWP-"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>

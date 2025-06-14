@@ -87,14 +87,18 @@ footer {
 }
 
 .contenedor-titulo{
-    flex: 1; display: flex; justify-content: center;
+    display: flex; justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contenedor-titulo h1{
     font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     color: #ffffff;
     text-align: center;
+    margin: 0;
+    padding: 200px 80px 80px 80px;
 }
 
 .contenedor-lista_imagenes{
@@ -154,7 +158,8 @@ footer {
 }
 
 .video-container .Socios-img {
-    max-width: 360px;
+    max-width: 300px;
+    padding-top: 10px;
 }
 
 .Tutorial {
@@ -250,6 +255,7 @@ section {
     max-width: 600px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 
 .video .play-btn {
@@ -262,7 +268,9 @@ section {
 
 
 .iconos{
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .iconos .icon{
@@ -384,6 +392,11 @@ section {
     header .container nav a{
         padding: 10px 20px;
         font-size: 1.5rem;
+    }
+
+    .contenedor-titulo h1{
+        font-size: 100px;
+        padding: 200px 0 0 0;
     }
 }
 .test-padding {
