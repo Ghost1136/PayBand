@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PayBand</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="Imagenes/payband_logo.png">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" type="image/png" href="assets/Imagenes/payband_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="container">
             
             <nav>
-                <a href="index.html"> <img class="logo_landp" src="Imagenes/payband_logo.png" alt="Logo PayBand"></a>
+                <a href="assets/index.html"> <img class="logo_landp" src="assets/Imagenes/payband_logo.png" alt="Logo PayBand"></a>
                 <a href="#registro">Registro</a>
                 <a href="#funciona">Cómo funciona</a>
                 <a href="#contactos">Contactos</a>
@@ -37,47 +37,11 @@
             <path d="M10 90L60 50.7362L10 10" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
-        <script>
-        const images = [
-            "Imagenes/prueba22.jpg",
-            "Imagenes/Prueba23.jpg",
-            "Imagenes/Prueba24.jpg",
-            "Imagenes/Prueba25.jpeg"
-        ];
-        let currentIndex = 0;
-        const contenedor = document.getElementById('contenedorPrincipal');
-        function setBg(index) {
-            contenedor.style.transition = "background-image 0.3s ease";
-            contenedor.style.backgroundImage = `url('${images[index]}')`;
-            contenedor.style.backgroundSize = "cover";
-            contenedor.style.backgroundPosition = "center";
-            contenedor.style.backgroundRepeat = "no-repeat";
-        }
-        setBg(currentIndex);
-
-        document.getElementById('prevBtn').onclick = function() {
-            contenedor.style.opacity = 0;
-            setTimeout(() => {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                setBg(currentIndex);
-                contenedor.style.opacity = 1;
-            }, 300);
-        };
-
-        document.getElementById('nextBtn').onclick = function() {
-            contenedor.style.opacity = 0;
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % images.length;
-                setBg(currentIndex);
-                contenedor.style.opacity = 1;
-            }, 300);
-        };
-        </script>
     </div>
     
     <div class="contenedor-up-footer">
             <div class="contenedor-imagen">
-                <img class="transaction-img" src="Imagenes/Prueba26.jpg" alt="transaction">
+                <img class="transaction-img" src="assets/Imagenes/Prueba26.jpg" alt="transaction">
             </div>
             <div class="information">
                 <p class="Fecha" id="fecha-actual"></p>
@@ -85,7 +49,7 @@
             </div>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/djSSzgY1cMI?si=1gKyl45q9CQqgaaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <img class="Socios-img" src="Imagenes/Prueba29.jpg" alt="partner">
+                <img class="Socios-img" src="assets/Imagenes/Prueba29.jpg" alt="partner">
             </div>
             <div class="Tutorial">
                 <div class="Tutoriales">
@@ -103,7 +67,7 @@
                 <a href="https://www.figma.com/proto/mKt0BJKu82Db9ysXDew7Fs/%F0%9F%93%B2Wireframes-for-mobile-UI-design--Community-?node-id=1767-3572&starting-point-node-id=1767%3A3572" target="_blank">
                     <button class="download-btn">
                         Descargar la aplicación Payband
-                        <img src="Imagenes/payband_logo.png" alt="payband_logo">
+                        <img src="assets/Imagenes/payband_logo.png" alt="payband_logo">
                     </button>
                 </a>
             </div>
@@ -191,20 +155,10 @@
     <footer>
         <p class="Mensaje">© 2025 PayBand. Todos los derechos reservados.</p>
     </footer>
-    <script>
-    const fechaElemento = document.getElementById('fecha-actual');
-    const fechaActual = new Date();
-    const opcionesFecha = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    };
-    const fechaFormateada = fechaActual.toLocaleDateString('es-PE', opcionesFecha);
-    fechaElemento.textContent = fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
-    </script>
-  <span style="display: none;">.</span>
     
+    <span style="display: none;">.</span>
+    <script src="assets/scripts/fecha.js"></script>
+    <script src="assets/scripts/carrusel.js"></script>
 </body>
 </html>
 
