@@ -1,8 +1,8 @@
 const images = [
-            "assets/Imagenes/prueba22.jpg",
-            "assets/Imagenes/Prueba23.jpg",
-            "assets/Imagenes/Prueba24.jpg",
-            "assets/Imagenes/Prueba25.jpeg"
+            "publics/assets/Imagenes/prueba22.jpg",
+            "publics/assets/Imagenes/Prueba23.jpg",
+            "publics/assets/Imagenes/Prueba24.jpg",
+            "publics/assets/Imagenes/Prueba25.jpeg"
         ];
         let currentIndex = 0;
         const contenedor = document.getElementById('contenedorPrincipal');
