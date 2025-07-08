@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_login.css">
+    <link rel="icon" href="publics/favicon.ico" type="image/x-icon">
+    <title>Login Payband</title>
+</head>
+<body>
+    <!-- Sección Login -->
+
+    <section class="login" id="login">
+        <div class="container_login">
+            <h2 class="login_title">Iniciar Sesión</h2>
+            <form class="login_form" id="loginForm">
+                <label for="correo">Correo:</label>
+                <input type="email" class="correo" id="correo" required/>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" class="password" id="password" required/>
+
+                <label for="rol">Rol:</label>
+                <select class="rol" id="rol" required>
+                    <option value="pasajero">Pasajero</option>
+                    <option value="admin">Administrador</option>
+                </select>
+
+                <button type="submit" class="btn_login">Entrar</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="validacion.js"></script>
+
+</body>
+</html>
