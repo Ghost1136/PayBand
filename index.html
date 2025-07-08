@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +9,84 @@
     <link rel="icon" href="publics\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="#"> <img class="logo_landp" src="publics/assets/Imagenes/payband_logo.png" alt="Logo PayBand"></a>
+                <a href="#"> <img class="logo_landp" src="publics/assets/Imagenes/payband_logo.png"
+                        alt="Logo PayBand"></a>
                 <a href="#registro">Registro</a>
                 <a href="#funciona">Cómo funciona</a>
+                <a href="#tecnologias">Tecnologías</a>
                 <a href="#ofertas">Ofertas</a>
+                <a href="#heuristicas">Heurísticas</a>
                 <a href="#contactos">Contactos</a>
             </nav>
         </div>
     </header>
 
     <div class="contenedor-principal" id="contenedorPrincipal" style="position: relative;">
-        <div class="contenedor-titulo" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 100%; text-align: center;">
-            <h1 class="titulo" style="color: white; text-shadow: 2px 2px 8px #000;">"Tu Viaje, tu ritmo, tu Payband"</h1>
+        <div class="contenedor-titulo"
+            style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 100%; text-align: center;">
+            <h1 class="titulo" style="color: white; text-shadow: 2px 2px 8px #000;">"Tu Viaje, tu ritmo, tu Payband"
+            </h1>
         </div>
         <!-- Botón flecha izquierda SVG -->
-        <button class="flechas" aria-label="Anterior" id="prevBtn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
+        <button class="flechas" aria-label="Anterior" id="prevBtn"
+            style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 10L10 49.2638L60 90" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M60 10L10 49.2638L60 90" stroke="white" stroke-width="20" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
         <!-- Botón flecha derecha SVG -->
-        <button class="flechas" aria-label="Siguiente" id="nextBtn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
+        <button class="flechas" aria-label="Siguiente" id="nextBtn"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
             <svg width="70" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 90L60 50.7362L10 10" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 90L60 50.7362L10 10" stroke="white" stroke-width="20" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
     </div>
-    
+
     <div class="contenedor-up-footer">
-            <div class="contenedor-imagen">
-                <img class="transaction-img" src="publics/assets/Imagenes/Prueba26.jpg" alt="transaction">
-            </div>
-            <div class="information">
-                <p class="Fecha" id="fecha-actual"></p>
-                <p class="Descripcion"><b>Paga justo según tu viaje. Sin efectivo, sin discusiones.</b></p>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/djSSzgY1cMI?si=1gKyl45q9CQqgaaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <img class="Socios-img" src="publics/assets/Imagenes/Prueba29.jpg" alt="partner">
+        <div class="contenedor-imagen">
+            <img class="transaction-img" src="publics/assets/Imagenes/Prueba26.jpg" alt="transaction">
+        </div>
+        <div class="information">
+            <p class="Fecha" id="fecha-actual"></p>
+            <p class="Descripcion"><b>Paga justo según tu viaje. Sin efectivo, sin discusiones.</b></p>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/djSSzgY1cMI?si=1gKyl45q9CQqgaaK" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <img class="Socios-img" src="publics/assets/Imagenes/Prueba29.jpg" alt="partner">
 
+        </div>
+        <div class="Tutorial">
+            <div class="Tutoriales">
+                <p><b>Como usar la pulsera inteligente</b></p>
+                <p>Tutorial de como usar la pulsera inteligente en el transporte público</p>
             </div>
-            <div class="Tutorial">
-                <div class="Tutoriales">
-                    <p><b>Como usar la pulsera inteligente</b></p>
-                    <p>Tutorial de como usar la pulsera inteligente en el transporte público</p>
-                </div>
-                <br> <br> <br>
-                <div class="Socios">
-                    <p><b>Empresas de transportes</b></p>
-                    <p>Empresas legales que están asociadas</p>
-                </div>
+            <br> <br> <br>
+            <div class="Socios">
+                <p><b>Empresas de transportes</b></p>
+                <p>Empresas legales que están asociadas</p>
             </div>
+        </div>
 
-            <div class="banner-descargar">
-                <a href="https://www.figma.com/proto/mKt0BJKu82Db9ysXDew7Fs/%F0%9F%93%B2Wireframes-for-mobile-UI-design--Community-?node-id=1767-3572&starting-point-node-id=1767%3A3572" target="_blank">
-                    <button class="download-btn">
-                        Descargar la aplicación Payband
-                        <img src="publics/assets/Imagenes/payband_logo.png" alt="payband_logo">
-                    </button>
-                </a>
-            </div>
+        <div class="banner-descargar">
+            <a href="https://www.figma.com/proto/mKt0BJKu82Db9ysXDew7Fs/%F0%9F%93%B2Wireframes-for-mobile-UI-design--Community-?node-id=1767-3572&starting-point-node-id=1767%3A3572"
+                target="_blank">
+                <button class="download-btn">
+                    Descargar la aplicación Payband
+                    <img src="publics/assets/Imagenes/payband_logo.png" alt="payband_logo">
+                </button>
+            </a>
+        </div>
 
     </div>
 
@@ -97,7 +112,7 @@
             <!-- Campo oculto por defecto -->
             <div id="promoField" class="promoField">
                 <label for="promo">Código de invitado:</label>
-                <input type="text" id="promo" name="promo" placeholder="XYZ1234"/>
+                <input type="text" id="promo" name="promo" placeholder="XYZ1234" />
             </div>
 
             <label for="password">Contraseña:</label>
@@ -110,7 +125,7 @@
             <button class="login_btn" onclick="location.href='Login.html'">Iniciar Sesión</button>
         </div>
 
-        
+
     </section>
 
     <!-- Sección Cómo funciona -->
@@ -118,22 +133,94 @@
         <h2 class="funciona_title">Cómo funciona</h2>
         <div class="funciona-content">
             <div class="texto">
-                <p>Esta app fue diseñada para una interacción intuitiva y útil. Tanto el administrador como el pasajero podrán disfrutar de las herramientas que ofrece nuestra app.</p>
+                <p>Esta app fue diseñada para una interacción intuitiva y útil. Tanto el administrador como el pasajero
+                    podrán disfrutar de las herramientas que ofrece nuestra app.</p>
                 <p><b>Mira nuestro tutorial:</b></p>
             </div>
             <div class="video">
-                <iframe 
-                    width="400"
-                    height="300"
-                    src="https://www.youtube.com/embed/wYo0gV_sBUg?si=QaeCJ_cGIj_cRWP-"
-                    title="YouTube video player"
-                    frameborder="0"
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/wYo0gV_sBUg?si=QaeCJ_cGIj_cRWP-"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
         </div>
+
     </section>
+
+
+    <!-- Sección Tecnologías -->
+    <section class="tecnologias" id="tecnologias">
+        <h2>Tecnologías empleadas en PayBand</h2>
+        <div class="tecnologias_container">
+
+            <!-- Bloque izquierdo (otras tecnologías con modales) -->
+            <div class="bloque_izquierdo">
+                
+                <button class="tech-btn"
+                    data-info="Utilicé HTML, CSS y JavaScript puro para diseñar e implementar toda la interfaz web de PayBand. Así logré mantener el sitio ligero, accesible y adaptable a cualquier dispositivo.">HTML,
+                    CSS y JavaScript</button>
+        
+                <button class="tech-btn"
+                    data-info="Aproveché GitHub Pages para alojar el sitio de forma gratuita, sin necesidad de servidores externos. Esto me permite hacer despliegues rápidos y mantener el proyecto actualizado en tiempo real.">GitHub
+                    Pages</button>
+        
+                <button class="tech-btn"
+                    data-info="Los escáneres instalados en las unidades de transporte leen cada PayBand usando tecnología NFC o QR, permitiendo validar el viaje del usuario automáticamente. Son esenciales en el ecosistema IoT de la plataforma.">Escáneres
+                    NFC / QR</button>
+        
+                <button class="tech-btn"
+                    data-info="Implementé una base de datos en la nube que registra el saldo, historial de viajes y promociones. Esto permite que la pulsera se sincronice en tiempo real con los servidores cada vez que es escaneada.">Base
+                    de datos en la nube</button>
+        
+                <button class="tech-btn"
+                    data-info="La PayBand no es solo una pulsera física: es un wearable inteligente. Su diseño permite que se comunique con los validadores gracias a chips de identificación (como RFID/NFC) integrados, propios del entorno IoT.">Dispositivo
+                    portátil inteligente</button>
+            </div>
+        
+            <!-- Bloque derecho: IoT destacado -->
+            <div
+                style="flex: 1; min-width: 300px; background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+                <img src="https://cdn-icons-png.flaticon.com/512/2779/2779876.png" alt="IoT icon"
+                    style="width: 80px; margin-bottom: 15px;" />
+                <h3 style="color: #003366;">Internet de las Cosas (IoT)</h3>
+                <p style="color: #333; font-size: 15px; text-align: justify;">
+                    ¿Qué es IoT?
+                    El Internet de las Cosas (IoT, por sus siglas en inglés) es una red de dispositivos físicos
+                    conectados a internet capaces de recopilar, transmitir y recibir datos sin intervención humana
+                    directa, entre los que se incluyen sensores, cámaras, electrodomésticos inteligentes, dispositivos
+                    portátiles y etiquetas RFID.
+                    Esta tecnología resulta fundamental porque, a nivel global, ha transformado sectores como el
+                    transporte, la salud, la agricultura y la industria, al permitir una gestión más eficiente de los
+                    recursos, reducir costos operativos y optimizar procesos mediante el análisis de datos en tiempo
+                    real; por ejemplo, en las ciudades inteligentes, el IoT facilita la automatización del alumbrado
+                    público, la gestión de residuos y el monitoreo ambiental, mejorando así la sostenibilidad y la
+                    calidad de vida urbana (Gubbi et al., 2013).
+                    Además, su aplicación en escáneres como los lectores de códigos de barras o dispositivos de pago ha
+                    revolucionado el comercio y la logística, ya que permite el seguimiento automático de productos, la
+                    actualización instantánea del inventario y la realización de pagos sin contacto de forma segura y
+                    rápida; esto no solo mejora la experiencia del usuario, sino que también reduce errores humanos y
+                    acelera los procesos en puntos de venta y centros de distribución. A su vez, como idea
+                    complementaria, el IoT fortalece la trazabilidad y seguridad de los productos, ya que los datos
+                    obtenidos a través de escaneos pueden registrar el historial de ubicación, temperatura o
+                    manipulación de cada artículo, lo cual es especialmente útil en sectores como el farmacéutico o
+                    alimentario, donde la calidad y el control son esenciales (Lee, Bagheri & Kao, 2015).
+                </p>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div id="techModal"
+            class="tech-modal">
+            <div class="tech-modal-content">
+                <span id="techModalClose" class="tech-modal-close">✖</span>
+                <p id="techModalContent" style="color: #333;"></p>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <!-- Sección Ofertas -->
     <section class="ofertas" id="ofertas">
@@ -150,6 +237,62 @@
             <div class="oferta-item">
                 <img src="publics/assets/Imagenes/oferta3.png" alt="Oferta 3">
                 <p>Recomienda a un amigo y ambos obtienen un descuento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Heurísticas -->
+    <section id="heuristicas">>
+        <h2>Heurísticas de Usabilidad en PayBand</h2>
+        <div class="heuristica_container">
+            <button class="heuristica-btn"
+                data-info="El sistema proporciona retroalimentación clara, por ejemplo, al hacer login o registrarse. El usuario sabe en todo momento dónde está y qué acción está ejecutando.">
+                <img src="publics/assets/Imagenes/Heuristica1.jpg" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Visibilidad del estado del sistema</button>
+
+            <button class="heuristica-btn"
+                data-info="Se utilizan términos comprensibles y visuales familiares como íconos de buses, promociones y botones comunes. El lenguaje está adaptado al usuario general.">
+                <img src="publics/assets/Imagenes/Heuristica2.png" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Correspondencia con el mundo real</button>
+
+            <button class="heuristica-btn"
+                data-info="Los formularios contienen validaciones. Si un campo está vacío o mal, se notifica al usuario con claridad para que lo corrija.">
+                <img src="publics/assets/Imagenes/Heuristica3.png" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Reconocer y recuperarse de errores</button>
+
+            <button class="heuristica-btn"
+                data-info="Se minimizan errores gracias al uso de listas desplegables y campos obligatorios con validación básica.">
+                <img src="publics/assets/Imagenes/Heuristica4.jpg" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Prevención de errores</button>
+
+            <button class="heuristica-btn"
+                data-info="La interfaz es limpia, clara y sin elementos innecesarios. Permite que el usuario se enfoque fácilmente.">
+                <img src="publics/assets/Imagenes/Heuristica5.jpg" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Estética y diseño minimalista</button>
+
+            <button class="heuristica-btn"
+                data-info="La estructura visual y navegación son coherentes en toda la web. Usa los mismos estilos y patrones en cada sección.">
+                <img src="publics/assets/Imagenes/Heuristica6.png" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Consistencia y estándares</button>
+
+            <button class="heuristica-btn"
+                data-info="Se ofrece ayuda mediante WhatsApp, correo y teléfono al pie de página. Hay opciones claras de asistencia.">
+                <img src="publics/assets/Imagenes/Heuristica7.png" alt="Visibilidad del sistema"
+                    style="width: 60px; margin-bottom: 10px;">
+                Ayuda y documentación</button>
+        </div>
+
+        <!-- Modal flotante -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="modalClose" class="modal-close">✖</span>
+                <p id="modalContent" class="modal-text"></p>
             </div>
         </div>
     </section>
@@ -185,12 +328,13 @@
     <footer>
         <p class="Mensaje">© 2025 PayBand. Todos los derechos reservados.</p>
     </footer>
-    
+
     <span style="display: none;">.</span>
     <script src="fecha.js"></script>
     <script src="carrusel.js"></script>
     <script src="main.js"></script>
     <script src="togglePromo.js"></script>
+    <script src="modal_btn.js"></script>
 </body>
-</html>
 
+</html>
