@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-
-
-
+html{
+    scroll-behavior: smooth;
+}
 
 header {
     background-color: #094074;
@@ -214,16 +214,30 @@ h2 {
 section {
   padding: 40px 40px 20px 40px;
   font-family: 'Montserrat', sans-serif;
+  scroll-margin-top: 40px;
+}
+
+.promoField{
+    display: none; 
+    margin-top: 10px;
 }
 
 .registro form,
-.registro .login-google {
+.registro .Login {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
   margin: auto;
+  margin-top: 40px;
   font-family: 'Montserrat', sans-serif;
+  color:#ffffff;
+}
+.registro .Login p{
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    align-content: center;
+    text-align: center;
 }
 
 .registro input,
@@ -234,7 +248,7 @@ section {
     font-family: 'Montserrat', sans-serif;
 }
 
-.google-btn {
+.login-btn {
     background-color: white;
     border: 1px solid #ccc;
     font-size: 20px;
@@ -266,6 +280,24 @@ section {
     cursor: pointer;
 }
 
+.oferta-item img,
+.oferta-item p{
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    align-items: center;
+    color: #ffffff;
+    
+}
+
+.ofertas-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-left: 100px;
+}
 
 .iconos{
     display: flex;
@@ -366,10 +398,12 @@ section {
     color: inherit;
 }
 
+
+
 @media (min-width: 720px) {
     
     .registro form,
-    .registro .login-google {
+    .registro .login{
         width: 90%;
     }
 

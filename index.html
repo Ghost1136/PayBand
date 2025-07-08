@@ -11,11 +11,11 @@
 <body>
     <header>
         <div class="container">
-            
             <nav>
                 <a href="#"> <img class="logo_landp" src="publics/assets/Imagenes/payband_logo.png" alt="Logo PayBand"></a>
                 <a href="#registro">Registro</a>
                 <a href="#funciona">Cómo funciona</a>
+                <a href="#ofertas">Ofertas</a>
                 <a href="#contactos">Contactos</a>
             </nav>
         </div>
@@ -75,10 +75,9 @@
 
     </div>
 
-
     <!-- Sección Registro -->
     <section class="registro" id="registro">
-        <h2>Registro</h2>
+        <h2 class="registro_title">Registro</h2>
         <form>
             <label for="nombre">Nombres:</label>
             <input type="text" id="nombre" name="nombre" required />
@@ -92,20 +91,31 @@
                 <option value="admin">Admin.</option>
             </select>
 
+            <!-- Botón para mostrar el código de invitado -->
+            <button type="button" onclick="togglePromoCode()">Agregar código de invitado</button>
+
+            <!-- Campo oculto por defecto -->
+            <div id="promoField" class="promoField">
+                <label for="promo">Código de invitado:</label>
+                <input type="text" id="promo" name="promo" placeholder="XYZ1234"/>
+            </div>
+
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required />
 
             <button type="submit">Enviar</button>
         </form>
-        <div class="login-google">
-            <p>Login</p>
-            <button class="google-btn">Google</button>
+        <div class="Login">
+            <p>¿Ya eres miembro? ¡Inicia sesión aquí!</p>
+            <button class="login_btn" onclick="location.href='Login.html'">Iniciar Sesión</button>
         </div>
+
+        
     </section>
 
     <!-- Sección Cómo funciona -->
     <section class="funciona" id="funciona">
-        <h2>Cómo funciona</h2>
+        <h2 class="funciona_title">Cómo funciona</h2>
         <div class="funciona-content">
             <div class="texto">
                 <p>Esta app fue diseñada para una interacción intuitiva y útil. Tanto el administrador como el pasajero podrán disfrutar de las herramientas que ofrece nuestra app.</p>
@@ -125,9 +135,28 @@
         </div>
     </section>
 
+    <!-- Sección Ofertas -->
+    <section class="ofertas" id="ofertas">
+        <h2 class="ofertas_title">Ofertas</h2>
+        <div class="ofertas-content">
+            <div class="oferta-item">
+                <img src="publics/assets/Imagenes/oferta1.png" alt="Oferta 1">
+                <p>Descuento del 10% en tu primer viaje.</p>
+            </div>
+            <div class="oferta-item">
+                <img src="publics/assets/Imagenes/oferta2.png" alt="Oferta 2">
+                <p>Recarga de saldo y obtén un viaje gratis.</p>
+            </div>
+            <div class="oferta-item">
+                <img src="publics/assets/Imagenes/oferta3.png" alt="Oferta 3">
+                <p>Recomienda a un amigo y ambos obtienen un descuento.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección Contactos -->
     <section class="contactos" id="contactos">
-        <h2>Contactos</h2>
+        <h2 class="contactos_title">Contactos</h2>
         <div class="iconos">
             <a href="https://wa.me/51975984304" target="_blank" class="icon whatsapp">
                 <div class="tooltip">WhatsApp</div>
@@ -161,6 +190,7 @@
     <script src="fecha.js"></script>
     <script src="carrusel.js"></script>
     <script src="main.js"></script>
+    <script src="togglePromo.js"></script>
 </body>
 </html>
 
